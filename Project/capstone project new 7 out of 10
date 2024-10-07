@@ -1,0 +1,36 @@
+List of assignments to get the silver badge certification any 7 assignments from 5 to 15. Please submit any 7 assignments from the following
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+5. create a simple python program to print the list of models in ChatGPT, Gemini and hugging face
+DONE
+
+6. Provide a python implementation of the TF-IDF algorithm, and implement it on a small corpus of data which has 3 sentences
+Done
+
+ 
+7. Create a CNN model for doing image recognition and do a model inference for the type of dog breed you show. Train the model with different dog breeds
+ 
+8. Using any dataset create a self-trained Glove vector model. Then make use of this model, to find the embedding of the given word.
+ 
+9. Use a prebuilt Word2vec model to find the embedding of the given word. 
+Done
+
+
+10. Perform the task of audio streaming from English text to English voice using any of the free open-source APIs or google or Facebook using llama or Gemini.
+Done
+
+
+11. Perform the task of voice audio in English to  English text using any of the free open-source APIs or google or Facebook using llama or Gemini
+Done
+
+
+12. Assignments using RAG and Langchain: Use Lang chain and Retrieval Augmented Generation, (RAG), and answer a question from the user using multiple PDF documents connected to the LLM using OpenAI. You can read the question and refer the multiple PDF documents to answer the question. You can use the APIs of any other open source LLM too. 
+Done
+
+13. Assignments using RAG and Langchain: Use Lang chain and Retrieval Augmented Generation, (RAG), and answer a question from the user using multiple text documents (.txt files) connected to the LLM using OpenAI. You can read the question and refer the multiple text documents to answer the question. You can use the APIs of any other open source LLM too.
+Done
+
+14. Create a simple generative adversarial network (GAN), and train it using the CIFAR image sets, do model inference with a single image
+ 
+ 
+15. We have the transformer based LLM model that we created with pytorch, train this LLM model using an appropriate dataset, and do model inference using this LLM
+
