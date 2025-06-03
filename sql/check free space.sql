@@ -16,3 +16,5 @@ SELECT DB_NAME() AS DbName,
 FROM sys.database_files
 WHERE 
 DB_NAME()='SSISDB'
+
+SELECT name, log_reuse_wait_desc, recovery_model, recovery_model_desc FROM sys.databases;
