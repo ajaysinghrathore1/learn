@@ -17,7 +17,9 @@ https://github.com/ajaysinghrathore1/learn/blob/main/python/hcl_genai_work/voice
 Assignment 4:
 create a toolchain with LLM, langchain and nosql database such as mongodb or redis and upload your information on to the nosql database and query it through an LLM
  https://github.com/ajaysinghrathore1/learn/blob/main/python/Mongodb/mongodb.ipynb
- 
+
+ <img width="474" height="357" alt="image" src="https://github.com/user-attachments/assets/6fe21216-b194-411b-b107-92894fb0207e" />
+
 
  
 capstone project 1:
