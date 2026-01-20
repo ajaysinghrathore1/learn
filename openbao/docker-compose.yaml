@@ -1,0 +1,53 @@
+name: openbao
+
+services: 
+  postgres:
+    image: postgres:16-alpine
+    container_name: bao-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-openbao}
+      POSTGRES_USER: ${POSTGRES_USER:-openbao}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    ports:
+      - "5432:5432"
+    networks:
+      - app-net
+
+  openbao:
+    image: openbao/openbao:latest
+    container_name: openbao2
+    depends_on:
+      postgres:
+        condition: service_healthy
+    cap_add:
+      - IPC_LOCK
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    environment:
+      # OpenBao can read the connection string from this env var (overrides config).
+      BAO_PG_CONNECTION_URL: ${BAO_PG_CONNECTION_URL:-postgres://openbao:change-me@postgres:5432/openbao?sslmode=disable}
+      BAO_ADDR: http://127.0.0.1:8200
+    volumes:
+      - .:/openbao/config
+    command: ["server",  "-config=/openbao/config/openbao.hcl"]
+    ports:
+      - "8200:8200"
+    networks:
+      - app-net
+
+
+volumes:
+  pgdata:
+
+networks:
+  app-net:
+    driver: bridge
