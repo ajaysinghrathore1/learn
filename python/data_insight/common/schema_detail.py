@@ -75,9 +75,11 @@ class schema_details():
 
     def get_embedding(input_text : str) -> list :
         from openai import AzureOpenAI
-        AZURE_OPENAI_ENDPOINT = "https://cb-open-ai.openai.azure.com/"   ##"https://aif-ext.openai.azure.com/"
-        AZURE_OPENAI_API_KEY = "3iYTlh91UL2NSnYaFIg3Me2RfWN3bg1kRbbAcuYRPJqN4hYi3J4iJQQJ99BDACYeBjFXJ3w3AAABACOG3kvE"
-        AZURE_OPENAI_API_VERSION = "2025-01-01-preview"
+
+
+        AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")   ##"https://aif-ext.openai.azure.com/"
+        AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+        AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION")
         # import openai
 
         # Azure OpenAI configuration
