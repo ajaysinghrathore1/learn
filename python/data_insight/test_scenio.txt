@@ -1,0 +1,13 @@
+"""
+show schema
+count the total tables in each schema
+list all columns happiness_2019
+count the total tables in each schema
+get the schema and tables with columns details
+using  table world_happiness.happiness_2019 , list top 10 happiest country or region based on score
+using  table world_happiness.happiness_2019 , list top 10 happiest country or region based on score into a bar chart
+pl. create a erd diagram for schema public
+pl. create a json data for schema public for tables including all column , data types, primary key and foreign key details and convert to erd diagram
+
+
+"""
